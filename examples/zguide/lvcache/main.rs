@@ -5,9 +5,12 @@ extern crate zmq;
 use std::str::from_utf8;
 use std::collections::HashMap;
 
+
+
 fn main() {
     let context = zmq::Context::new();
     let frontend = context.socket(zmq::SUB).unwrap();
+
     frontend.connect("tcp://localhost:5557").expect("could not connect to frontend");
     let backend = context.socket(zmq::XPUB).unwrap();
     backend.bind("tcp://*:5558").expect("could not bind backend socket");
