@@ -11,7 +11,7 @@ fn main() {
 	// }
 }
 
-#[cfg(not(feature = "zmq_has"))]
+// #[cfg(not(feature = "zmq_has"))]
 fn main() {
     use std::mem::size_of;
     use std::os::raw::c_int;
