@@ -1052,10 +1052,10 @@ pub fn proxy_with_capture(frontend: &mut Socket,
 /// For a list of capabilities, please consult the `zmq_has` manual page.
 pub fn has(capability: &str) -> Option<bool> {
     if cfg!(ZMQ_HAS_ZMQ_HAS) {
-        let c_str = ffi::CString::new(capability).unwrap();
-        unsafe {
-            Some(zmq_sys::zmq_has(c_str.as_ptr()) == 1)
-        }
+        // let c_str = ffi::CString::new(capability).unwrap();
+        // unsafe {
+        //     Some(zmq_sys::zmq_has(c_str.as_ptr()) == 1)
+        // }
     } else {
         None
     }

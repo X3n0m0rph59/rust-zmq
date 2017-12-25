@@ -64,7 +64,7 @@ pub use ffi::{
     zmq_poll,
     zmq_proxy,
     zmq_proxy_steerable,
-    zmq_has,
+    // zmq_has,
     zmq_device,
     zmq_z85_encode,
     zmq_z85_decode,

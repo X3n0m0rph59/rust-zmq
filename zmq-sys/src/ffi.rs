@@ -138,8 +138,8 @@ extern "C" {
                                capture: *mut ::std::os::raw::c_void,
                                control: *mut ::std::os::raw::c_void)
      -> ::std::os::raw::c_int;
-    pub fn zmq_has(capability: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    // pub fn zmq_has(capability: *const ::std::os::raw::c_char)
+    //  -> ::std::os::raw::c_int;
     pub fn zmq_device(_type: ::std::os::raw::c_int,
                       frontend: *mut ::std::os::raw::c_void,
                       backend: *mut ::std::os::raw::c_void)
