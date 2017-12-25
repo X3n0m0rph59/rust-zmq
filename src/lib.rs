@@ -1056,6 +1056,7 @@ pub fn has(capability: &str) -> Option<bool> {
         // unsafe {
         //     Some(zmq_sys::zmq_has(c_str.as_ptr()) == 1)
         // }
+        None
     } else {
         None
     }
