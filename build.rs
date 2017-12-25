@@ -50,7 +50,7 @@ fn main() {
         let mut _patch = 0;
         zmq::zmq_version(&mut major, &mut minor, &mut _patch);
         if major >= 4 && minor >= 1 {
-            println!("cargo:rust-cfg=ZMQ_HAS_ZMQ_HAS=\"1\"");
+            // println!("cargo:rust-cfg=ZMQ_HAS_ZMQ_HAS=\"1\"");
         }
     }
 }
