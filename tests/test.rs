@@ -576,21 +576,21 @@ mod compile {
     }
 }
 
-test!(test_zmq_xpub_welcome_msg,{
-    let ctx=Context::new();
+// test!(test_zmq_xpub_welcome_msg,{
+//     let ctx=Context::new();
 
-    let xpub=ctx.socket(XPUB).unwrap();
-    xpub.bind("inproc://xpub_welcome_msg").unwrap();
-    xpub.set_xpub_welcome_msg(Some("welcome")).unwrap();
+//     let xpub=ctx.socket(XPUB).unwrap();
+//     xpub.bind("inproc://xpub_welcome_msg").unwrap();
+//     xpub.set_xpub_welcome_msg(Some("welcome")).unwrap();
 
-    let sub=ctx.socket(SUB).unwrap();
-    sub.set_subscribe(b"").unwrap();
-    sub.connect("inproc://xpub_welcome_msg").unwrap();
+//     let sub=ctx.socket(SUB).unwrap();
+//     sub.set_subscribe(b"").unwrap();
+//     sub.connect("inproc://xpub_welcome_msg").unwrap();
 
-    let from_pub=xpub.recv_bytes(0).unwrap();
-    assert_eq!(from_pub.len(),1);
+//     let from_pub=xpub.recv_bytes(0).unwrap();
+//     assert_eq!(from_pub.len(),1);
 
-    let from_xsub = sub.recv_bytes(0).unwrap();
-    assert_eq!(from_xsub.len(),7);
+//     let from_xsub = sub.recv_bytes(0).unwrap();
+//     assert_eq!(from_xsub.len(),7);
 
-});
+// });
